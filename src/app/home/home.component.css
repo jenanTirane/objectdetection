@@ -1,0 +1,277 @@
+body{
+    
+    background: rgb(41,45,44);
+    background: linear-gradient(90deg, rgba(41,45,44,1) 0%, rgba(1,27,47,1) 0%, rgba(24,27,33,1) 56%, rgba(2,30,51,1) 85%);
+
+}
+
+
+.main
+{
+    background-color: transparent;
+    width:65%;
+    height:550px;
+    margin: 0 auto;
+    margin-top: 35px;
+    border-radius: 20px;
+}
+.icon
+{
+    
+    padding-top: 35px;
+    padding-left: 50px;
+    color: #bdcebe;
+    -webkit-animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    
+}
+.header
+{
+    width: 100%;
+    height:50%;
+    background-image: url("https://d2m6ke2px6quvq.cloudfront.net/uploads/2020/12/02/4f000a26-4507-4a36-be35-a9eb192db08f.jpg");
+    background-size: cover;
+    border-top-left-radius: 20px;
+    padding-bottom: 50px;
+    
+}
+.aiword
+{
+    padding-top: 25px;
+    color: #bdcebe;
+    text-transform: uppercase;
+    
+}
+.object
+{
+    padding-top: 15px;
+    color:  #618685;
+    padding-bottom: 15px;
+}
+.reader
+{
+    padding-top: 35px;
+    
+}
+.readbtn
+{
+    border-radius: 45px;
+    height: 25px;
+    width: 100px;
+    border: none;
+    color: #d5f4e6;
+    background-color:  #618685;
+    
+}
+.lign
+{
+    
+    width: 25%;
+    height: 1px;
+    background-color: #bdcebe;
+}
+.buttom
+{
+    width:100%;
+    height: 35%;
+    background-color: rgba(1,27,47,1);
+    display: flex;
+    column-gap: 50px;
+    border-bottom-left-radius: 10px;
+
+
+}
+.cartoon
+{
+   
+    color: #618685;
+    width: 30%;  
+    border-bottom-left-radius: 15px;
+    background-color: transparent; 
+    cursor: pointer;
+    
+}
+.iconsbuttom{
+
+    padding-left: 100px;
+    padding-top: 25px;
+    opacity: 0;
+    
+}
+.models
+{
+    font-size: x-large;
+    padding-top: 15px;
+    padding-left:60px;
+    color: white;
+}
+.def
+{
+    padding-left: 15px;
+    font-size: small;
+    color:  white;
+}
+.uploadbtn
+{
+
+    color: rgba(1,27,47,1);
+    border-radius: 45px;
+    border:none;
+    height: 40px;
+    width: 150px;
+    margin: 0 auto;
+    transition: 0.3s all;
+    cursor: pointer;
+    margin-top: 15px;
+   
+}
+.cartoon:hover{
+    background-color: #2c5d63;
+    -webkit-animation: shadow-pop-tr 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+	        animation: shadow-pop-tr 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+
+
+    
+   
+}
+
+.cartoon:hover .iconsbuttom{
+   opacity: 1;
+     
+}
+.upload
+{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+    
+}
+.uploadbtn:hover{
+    background-color:#618685;
+    color: white;
+}
+
+
+ @-webkit-keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+ @-webkit-keyframes shadow-pop-tr {
+    0% {
+      -webkit-box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+              box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+      -webkit-transform: translateX(0) translateY(0);
+              transform: translateX(0) translateY(0);
+    }
+    100% {
+      -webkit-box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
+              box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
+      -webkit-transform: translateX(-8px) translateY(8px);
+              transform: translateX(-8px) translateY(8px);
+    }
+  }
+  @keyframes shadow-pop-tr {
+    0% {
+      -webkit-box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+              box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+      -webkit-transform: translateX(0) translateY(0);
+              transform: translateX(0) translateY(0);
+    }
+    100% {
+      -webkit-box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
+              box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
+      -webkit-transform: translateX(-8px) translateY(8px);
+              transform: translateX(-8px) translateY(8px);
+    }
+  }
+  
+  .activediv
+  {
+    background-color: #2c5d63;
+    -webkit-animation: shadow-pop-tr 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+	        animation: shadow-pop-tr 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+
+    
+  }
+  .activediv .iconsbuttom{
+    opacity: 1;
+      
+ }
+ .inputfile
+ {
+  visibility: hidden;
+ }
+  .activediv .uploadbtn{
+    opacity: 1;
+  }
+  .frames
+  {
+    width: 350px;
+    height: 350px;
+    border: 5px solid white;
+    border-radius: 10px;
+    margin: 20px auto;
+    
+  }
+  .frames img 
+  {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+  }
+  .loading{
+    color: white;
+    font-size: large;
+    margin: 10px auto ;
+    text-align: center;
+
+  }
+   .loading i{
+
+    -webkit-animation: rotate-center 0.6s ease-in-out infinite both;
+	        animation: rotate-center 0.6s ease-in-out infinite both;
+   }
+   @-webkit-keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  

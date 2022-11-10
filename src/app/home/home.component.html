@@ -1,0 +1,57 @@
+<div class="main">
+  <div class="header">
+    <div class="icon">
+      <i class="fa-brands fa-squarespace fa-2x"> Y76</i>
+      <div class="aiword">Artificial Intelligence</div>
+      <div class="object">Object Detection Models</div>
+      <div class="lign"></div>
+    </div>
+  </div>
+  <div class="buttom">
+    <div
+      class="cartoon"
+      [class.activediv]="datatype == 'cartoon'"
+      (click)="getdatatype('cartoon')"
+    >
+      <div class="iconsbuttom">
+        <i class="fa-sharp fa-solid fa-hippo fa-3x"></i>
+      </div>
+      <div class="models">Cartoon Faces</div>
+      <div class="def">Based on yolov5 model to detect your image</div>
+    </div>
+    <div
+      class="cartoon"
+      [class.activediv]="datatype == 'general'"
+      (click)="getdatatype('general')"
+    >
+      <div class="iconsbuttom">
+        <i class="fa-sharp fa-solid fa-worm fa-3x"></i>
+      </div>
+      <div class="models">General Detection</div>
+      <div class="def">General detect according to the classcfication</div>
+    </div>
+
+    <div
+      class="cartoon"
+      [class.activediv]="datatype == 'human'"
+      (click)="getdatatype('human')"
+    >
+      <div class="iconsbuttom">
+        <i class="fa-sharp fa-solid fa-person fa-3x"></i>
+      </div>
+      <div class="models">Human faces</div>
+      <div class="def">Detection for left , right eyes , nose and mouth</div>
+    </div>
+  </div>
+  <div class="upload" *ngIf="datatype">
+    <button class="uploadbtn" (click)="openclass()">Upload</button>
+  </div>
+  <div class="loading" *ngIf="loading">
+    <i class="fa-solid fa-spinner"></i> Loading Image...
+  </div>
+  <div class="frames" *ngIf="image && !loading">
+    <img src="{{ image }}" />
+  </div>
+
+  <input type="file" class="inputfile" (change)="change($event)" />
+</div>
