@@ -12,12 +12,18 @@ export class HomeComponent implements OnInit {
   image: any ="";
   result: any = {};
   loading : any = false;
+  video: any = "";
+  loading1 : any = false;
+  
 
   getdatatype(text: any) {
     this.datatype = text;
   }
   openclass() {
     $('.inputfile').click();
+  }
+  openclass1() {
+    $('.upvd').click();
   }
   
   async change(event: any) {
@@ -43,6 +49,27 @@ export class HomeComponent implements OnInit {
     return btoa(String.fromCharCode.apply(null, str.replace(/\r|\n/g, "").replace(/([\da-fA-F]{2}) ?/g, "0x$1 ").replace(/ +$/, "").split(" ")));
 }
   constructor() {}
+
+  async uploadvideo(event: any) {
+    this.loading1 = true;
+    this.video = event.target.files[0];
+    let formData: FormData = new FormData();
+  
+    formData.append('videos', this.video);
+ 
+    await axios
+      .post('http://35.212.140.235:3001/poseestimation', formData)
+      .then(async (response) => {
+        this.video= response.data
+        this.loading1= false;
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+ 
+
+
 
   ngOnInit(): void {}
 }

@@ -1,57 +1,90 @@
 <div class="main">
-  <div class="header">
-    <div class="icon">
-      <i class="fa-brands fa-squarespace fa-2x"> Y76</i>
-      <div class="aiword">Artificial Intelligence</div>
-      <div class="object">Object Detection Models</div>
-      <div class="lign"></div>
-    </div>
-  </div>
-  <div class="buttom">
-    <div
-      class="cartoon"
-      [class.activediv]="datatype == 'cartoon'"
-      (click)="getdatatype('cartoon')"
-    >
-      <div class="iconsbuttom">
-        <i class="fa-sharp fa-solid fa-hippo fa-3x"></i>
+  <div class="first">
+    <div class="header">
+      <div class="icon">
+        <i class="fa-brands fa-squarespace fa-2x"> Y76</i>
+        <div class="aiword">Artificial Intelligence</div>
+        <div class="object">Object Detection Models</div>
+        <div class="lign"></div>
       </div>
-      <div class="models">Cartoon Faces</div>
-      <div class="def">Based on yolov5 model to detect your image</div>
     </div>
-    <div
-      class="cartoon"
-      [class.activediv]="datatype == 'general'"
-      (click)="getdatatype('general')"
-    >
-      <div class="iconsbuttom">
-        <i class="fa-sharp fa-solid fa-worm fa-3x"></i>
+    <div class="buttom">
+      <div
+        class="cartoon"
+        [class.activediv]="datatype == 'cartoon'"
+        (click)="getdatatype('cartoon')"
+      >
+        <div class="iconsbuttom">
+          <i class="fa-sharp fa-solid fa-hippo fa-3x"></i>
+        </div>
+        <div class="models">Cartoon Faces</div>
+        <div class="def">Based on yolov5 model to detect your image</div>
       </div>
-      <div class="models">General Detection</div>
-      <div class="def">General detect according to the classcfication</div>
+      <div
+        class="cartoon"
+        [class.activediv]="datatype == 'general'"
+        (click)="getdatatype('general')"
+      >
+        <div class="iconsbuttom">
+          <i class="fa-sharp fa-solid fa-worm fa-3x"></i>
+        </div>
+        <div class="models">General Detection</div>
+        <div class="def">General detect according to the classcfication</div>
+      </div>
+
+      <div
+        class="cartoon"
+        [class.activediv]="datatype == 'human'"
+        (click)="getdatatype('human')"
+      >
+        <div class="iconsbuttom">
+          <i class="fa-sharp fa-solid fa-person fa-3x"></i>
+        </div>
+        <div class="models">Human faces</div>
+        <div class="def">Detection for left , right eyes , nose and mouth</div>
+      </div>
+    </div>
+    <div class="upload" *ngIf="datatype">
+      <button class="uploadbtn" (click)="openclass()">Upload</button>
+    </div>
+    <div class="loading" *ngIf="loading">
+      <i class="fa-solid fa-spinner"></i> Loading Image...
+    </div>
+    <div class="frames" *ngIf="image && !loading">
+      <img src="{{ image }}" />
     </div>
 
-    <div
-      class="cartoon"
-      [class.activediv]="datatype == 'human'"
-      (click)="getdatatype('human')"
-    >
-      <div class="iconsbuttom">
-        <i class="fa-sharp fa-solid fa-person fa-3x"></i>
+    <input type="file" class="inputfile" (change)="change($event)" />
+
+    <div class="centercover"></div>
+
+    <div class="pose estimation">
+      <div class="buttom">
+        <div class="word">Pose estimation</div>
       </div>
-      <div class="models">Human faces</div>
-      <div class="def">Detection for left , right eyes , nose and mouth</div>
+      <div class="posedefinition">
+        <div class="posesub1">
+          Human Pose Estimation (HPE) is a way of identifying and classifying
+          the joints in the human body. Essentially it is a way to capture a set
+          of coordinates for each joint (arm, head, torso, etc.,) which is known
+          as a key point that can describe a pose of a person. The connection
+          between these points is known as a pair.
+        </div>
+        <div class="posesub2">
+          <button class="readpose">Read more</button>
+        </div>
+      </div>
+      <div class="uploadpose">
+        <p>Upload Images and Videos</p>
+        <div class="minidiv">
+          <i class="fa-solid fa-upload fa-3x" (click)="openclass1()"></i>
+        </div>
+        <div class="loading" *ngIf="loading1">
+          <i class="fa-solid fa-spinner"></i> Loading Image...
+        </div>
+      </div>
+      <input type="file" class="upvd" (change)="uploadvideo($event)" />
+      <a *ngIf="!loading1 && video" href="{{ video }} " download>Download</a>
     </div>
   </div>
-  <div class="upload" *ngIf="datatype">
-    <button class="uploadbtn" (click)="openclass()">Upload</button>
-  </div>
-  <div class="loading" *ngIf="loading">
-    <i class="fa-solid fa-spinner"></i> Loading Image...
-  </div>
-  <div class="frames" *ngIf="image && !loading">
-    <img src="{{ image }}" />
-  </div>
-
-  <input type="file" class="inputfile" (change)="change($event)" />
 </div>
