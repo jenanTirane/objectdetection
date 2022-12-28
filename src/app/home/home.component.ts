@@ -54,9 +54,7 @@ export class HomeComponent implements OnInit {
     this.loading1 = true;
     this.video = event.target.files[0];
     let formData: FormData = new FormData();
-  
     formData.append('videos', this.video);
- 
     await axios
       .post('http://35.212.140.235:3001/poseestimation', formData)
       .then(async (response) => {
@@ -67,10 +65,6 @@ export class HomeComponent implements OnInit {
         console.log(error);
       });
   }
- 
-
-
-
   ngOnInit(): void {}
 }
 
