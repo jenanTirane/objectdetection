@@ -85,6 +85,12 @@
       </div>
       <input type="file" class="upvd" (change)="uploadvideo($event)" />
       <a *ngIf="!loading1 && video" href="{{ video }} " download>Download</a>
+      <a
+        *ngIf="!loading1 && video"
+        href="http://35.212.140.235:5001/keypoint"
+        download
+        >Getfile</a
+      >
     </div>
   </div>
 </div>
