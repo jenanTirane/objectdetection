@@ -48,7 +48,7 @@
       <button class="uploadbtn" (click)="openclass()">Upload</button>
     </div>
     <div class="loading" *ngIf="loading">
-      <i class="fa-solid fa-spinner"></i> Loading Image...
+      <i class="fa-solid fa-spinner"></i> Loading Video...
     </div>
     <div class="frames" *ngIf="image && !loading">
       <img src="{{ image }}" />
@@ -91,6 +91,38 @@
         download
         >Getfile</a
       >
+    </div>
+
+    <div class="pose estimation">
+      <div class="buttom">
+        <div class="word">HIK Landmarks</div>
+      </div>
+      <div class="posedefinition">
+        <div class="posesub1">
+          Human IK (Inverse Kinematics) is a system for creating and animating
+          human-like characters in 3D computer graphics. It provides a
+          standardized skeletal structure for humanoid characters, along with a
+          set of tools for controlling and animating the character's movements.
+          Human IK simplifies the animation process by allowing animators to
+          focus on the movements of the character's limbs and body parts, rather
+          than having to manipulate each joint and bone individually. This
+          system is widely used in the video game industry, as well as in film
+          and television animation.
+        </div>
+        <div class="posesub2">
+          <button class="readpose">Read more</button>
+        </div>
+      </div>
+      <div class="uploadpose">
+        <p>Upload Images and Videos</p>
+        <div class="minidiv">
+          <i class="fa-solid fa-upload fa-3x" (click)="openclass2()"></i>
+        </div>
+        <div class="loading" *ngIf="loading2">
+          <i class="fa-solid fa-spinner"></i> Uploading Video...
+        </div>
+      </div>
+      <input type="file" class="upvd1" (change)="uploadvideo1($event)" />
     </div>
   </div>
 </div>
